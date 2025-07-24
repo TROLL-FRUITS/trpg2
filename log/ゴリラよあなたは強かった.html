@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>ゴリラよあなたは強かった</title><style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style><style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>ゴリラよあなたは強かった</h1><h2>セッション開始</h2><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>1D100=81</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>今回も１ｄでダイスが振れます。が偏ると思うので別サイト使われても大丈夫ですのお！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>貴方、良い内臓してそうね</dd></dl><dl class="main" style="color: rgb(167, 77, 195);"><dt>Bevel</dt><dd>べべーん<br></dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>腰はやめてさしあげろ！w</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>ほら、つぎの店いくわよ、四郎！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>蛍ちゃん大丈夫かぁ？ 飲みすぎは良くないぜ？</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>3D6=10</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>1D6=3</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>3D6=11</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>酔ってないわよぉ～……あ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>身長180㎝以上はある大柄で、毛深くて筋隆々な体つきをしている。</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>背は四郎のほうが大きいかな</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>お？</dd></dl><dl class="zatsudan"><dt></dt><dd>後 理羅（うしろ さとら）」</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ウホ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ごりらw</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ウ、ウホ！？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>何この解剖されそうな…うほー！</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=71</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=36</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>失敗w</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D3=3</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>わあ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あんれまー……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>解剖しがいのありそうなやつだったわねえ～、<br>しろ～？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ウホウホホ、ホホウホホ、ホウホホホ。ホホウホホ？</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=48</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>落ちてた/////</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>なにいってんのよお……ああ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>どうも彼はあなたに『私の力になってくれないか』と頼みごとしているようですよ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>こいつどっかで見たぞ？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>はあ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あんた、ゴリラなの？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>君、このゴリラがなんて言ってるのかわかるのか？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ウホホホ、ホホホ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>私の名前は綿貫一郎です</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あっそう、じゃあ駄眼鏡</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>赤子のころゴリラ語を喋れる闇の帝王に襲われ、その際に闇の帝王の魂が一部か自分に入り込んだのでゴリラ語がわかるのです</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>すごい設定だなぁ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホッホウホウホウ、ウホホイ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>ちょっとまってよ、ウチは精神科じゃないわよ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ウホホイw</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>きちんとした事実ですよ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>綿貫は信用で振ってください</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>証拠だしなさいよ、まったく</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>なんとなく（）</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホホホホ、ウホホウウホホウウ…ホッホウ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ほ、ほっほー？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「自分には呪いがかけられており、その呪いを解いて欲しい」だそうですよ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウ、ウッホウ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>駄眼鏡、アンタ優秀ね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>闇の帝王の魂が入ってますので</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>呪いぃ？ おじさんそういうのには興味ないんだけどなぁ……。その呪いってやつでこの……えっと後くんは困ってるのかな？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>水買って来たら、話聞いてやってもいいわ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ヒヒウウホ、ッホウウウウッホウホ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ヒヒってなんだww</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>はやくしなさい、ほら</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「生命の危機だそうです」</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>ウホホ、ッフウウホホ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>は？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホホホウホウウ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ワケガワカラナイヨ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「ここ二十万円があります、これでどうか…」</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=19</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>成功ですw</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=16</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あら、20万あるわね……</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>に、にぢゅぅ！？ ……おじさん達は何をすればいいのかな？ 呪いを解く方法とかはわかってるのかな？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホ、ホウホウホホ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>偽札じゃないわね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「八百屋がバナナを売ってくれなくなる呪い」だそうです</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>は？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>八百屋じゃないところで入手すればいいんじゃ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>さて四郎、帰りましょうか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウホ…ホウエホエエホオ…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ま、待て待て蛍ちゃん……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「あそこのバナナしか食べられないんだ」</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>謎の拘りがあるのかぁ。</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「あそこは無添加ですから」</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>それは重要だな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>バナナ如きで動くほど暇じゃないのよ……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ッホ！ホホウホホ！！？！！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>で、でも蛍ちゃん20万……</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あ、ああ！？ お、落ち着け！ ……な？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウホ…ッホッホホウホ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>……いや、あのね<br>ゴリラよ？ゴリラ…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>しかしこのままではこのゴリラは餓死してしまうかもしれないぞ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「彼は人間社会に適応した人間ですよ」</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>はああああ？？？？？？？？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>でもバナナしか食べれないんだなぁ……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウホオホ…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>あらぁ…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ど、土下座しちゃったよ……どうする蛍ちゃん</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>ホホウホホウ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>…はあ、仕方ないわね<br>…いいわ、ただし、条件がある</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウ？ホウホホ…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ホ、ホホホ〜？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>この私を、いつまで待たせる気なの…<br>早く水買って来い！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>PL発言です！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ほうっほほほおおお！！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>SANチェック入るんじゃww</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ウホホ、ホウホホ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あ、ありがとうね……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「これでどうにか」<br></dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>四郎さん普通に水持ってるけどね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>上出来よ、ゴリラ<br></dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウホホ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>じゃあ今度は俺達の番かな？ 呪いを解くって言われても具体的に何をすればいいのか……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「まずは情報収集です。図書館で呪いについて調べましょう」</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>はあああ？？？？？？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウホホウホホウウウッホホ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>図書館で調べてわかることなのか……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>さあいきましょいきましょ<br></dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あ、ああ待って待って</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>なあああんで図書館にそんなもんがあるのよ…</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>本なんてあるのかしら…<br>あったら私、死にかけてないわよ…</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=55</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>失敗！</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=76</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ま、まあこんなところにあるとは思えないし……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホッホウウウウホホウホッホイ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「やはり調査の基本は聞き込みですね」</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ウホッホイ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>そ、そうだねぇ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウウッホホ、ウッホイイホホウウウウオ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>蛍ちゃんいつか色々爆発しそう……</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ウウウウオとは……</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=10</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>成功w</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=60</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>NPC</dt><dd>八百屋のオヤジは魔術師だという噂を聞いたことがある</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>……</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=76</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=56</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>失敗w</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D3=2</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D3=3</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>NPC</dt><dd>ではまたな人の子よ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あ、はい……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>ゴリラいすぎよ…なにこの町…？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>かれは人間語が理解できるごりらのようでうすね</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>もしかして俺達はおかしな世界に迷い込んだんじゃ……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>動物園…？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>それでどこにいきましょうか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>マウンテンゴリラは絶滅の危機に瀕していて…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>次に行く場所って八百屋しかなくないか……？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウホッホウウウオオウッホホッホイオ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>そうですね</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>図書館で何かわかればまだ良かったんだがなぁ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あったら苦労しないわよ…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>もう一度もどってみてみます？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>待ちなさいゴリ眼鏡</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>いえ、私はゴリラの帝王をやどしている人間であって…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウホホウウウウッホ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>じゃあ、後で解剖してやるから<br>取りあえず私、行きたくない…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウッホウホウウホ！！？！？？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>「二十万用意したのに最後までついてきてくれないのか？」</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>や、八百屋のおじさんが本当に魔術師なら呪いをかけたのもそのおじさんってことになるのかな？ じゃあ解いてくれるよう交渉するしかないのか……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あのねえ…</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ッホウッフウウウフウウホッホ！！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>蛍ちゃん。おじさんはお金が欲しい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あんた5万でいいわよね</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>おじさんの為に協力してくr……えぇ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>ささ、いきましょうよ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>行きましょ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あ、はい</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>本日定休日</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>四郎と蛍ちゃんでこじ開けるか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホホウウホホ！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>天の声が聞こえたわ…</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>四郎と蛍ちゃんで合わせてSTR30</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>戦闘！？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>耐久は２２</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>（うわあ…）</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>耐久１３</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ヒィ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>四郎やっちゃいなさい</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ほっほうほほうほ！！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>落ちてた(´･_･`)</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>シャッターにチェーンソー効くんすか？？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>こぶしかな〜</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>こぶしで振ります（）</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1D100=99</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>エ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ダイス変えまーす！！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>なにやってんのよお…</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>お、おじさんもう47だから大事にしてね……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホウホオオホ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>人間は生涯現役なのよ</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=46</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D8=6</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D4=3</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>４</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>せいやあ！！！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>私は戦闘用につくられてませんから</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>蛍ちゃんすごいなぁ……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あんたらが軟弱過ぎんのよ！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>後さん強すぎ。。。</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ヒウッホウホホホ！１</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>う、後くんお疲れ様……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>ゴリラあんた、うちの部下にしたいレベルだわ</dd></dl><dl class="zatsudan"><dt></dt><dd>なんだなんだ！？？なにごとだ？？誰だ！！！？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>通報？まっさかありえねえな、後さんなんか連れてなにしてんだ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>此方のほうに通報がありまして、<br>駆け付けてきました、わたくし、白鷺　蛍と言いますわ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>一体なんお通報だ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>こちらでゴリラが倒れてるって…</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=28</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>…？仕方ない少し確認してこよう</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ゴリラが……？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>そんなはったり信じるか！！やっちまえ！１</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ウホホホ！！ホッシイイホ！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>…</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>1D100=47</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>15成功</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ホッシイイホ！！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ナックルダスターかなぁ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>ナックルダスターとダイヤモンド製のジェラルミンケース？ちょうど持ってますよ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>いやここは四郎おじさんらしくチェーンソーで行こう。背負ってたでっけぇリュックからチェーンソーを出します</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ナックルダスターも貰っときます/////</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>ありがたく貰っとくわ（満面の笑み）</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>そのチェーンソー対人用でないですね？これをどうぞ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>え、貰ったら返さないよ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あんた何者なのよ！？</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>2D9=8</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ww</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>闇の帝王の持ち物ですよ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>（闇の帝王ってドラえもんかしら）</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>落ちたから繋ぎ直すね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あら...死にかけじゃないかしら</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>え、はや？？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>チェーンソーで攻撃します</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>33成功です</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>2D9=12</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ww</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>あああ！！！！！！！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>あんれま</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>なにしてくれてんのよ！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>このチェーンソー……いいなぁ……（恍惚）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>せっかく解剖素体になると思ったのに！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>良かったなぁ後くん。……しかし、呪いは？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>そんなことより化け物寄こしなさいよ八百屋あ！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>呪いならもう解いた！！！ははははやくでってってくれ！！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>カエルならいくらでもやるよ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>八百屋</dt><dd>もう魔術なんて一生やんねええええよお</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>お、おおぅ……？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>知るか！！！！化け物よこしなさい！！！！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>彼方より来たる（八百屋さん）</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>ホッホウホホウウウホホ！１</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ほ、本当に呪いは解けたのか？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>というかバナナを売ってくれる八百屋がいなくなって……</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>と、彼が去っていった方を指さして言います</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>今後は私が八百屋として生きていきましょう</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>はあ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>一郎</dt><dd>これで万事解決ですね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>アイツ…今度会ったらコロンビアネクタイしてやるんだから</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>それなら最初からそうすれば……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>後</dt><dd>こちらは先日のお礼です</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>SANチェックかな（）</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>63失敗ですw</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>1ですな</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ワーイ……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>白鷺　蛍</dt><dd>（心底いらないけど読んでおこうかしらね…）</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ゴリラ語の技能ください←</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ゴリラ語11？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>ささみちゃんの卓でだけチェーンソーがなんだって？（落ちた）</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>2D9=10</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>2D9=9</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>1D3=3</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>2D6=9</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>GM</dt><dd>1D3=2</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>谷繁 四郎</dt><dd>お疲れ様w</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
