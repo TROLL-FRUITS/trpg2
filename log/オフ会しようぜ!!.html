@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>オフ会しようぜ!!</title><style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style><style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>オフ会しようぜ!!</h1><h2>セッション開始</h2><dl class="zatsudan"><dt></dt><dd>私だ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>さたんぴっぐ</dt><dd>べべーん</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>てすてす</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私が男だとわかる者はいるまい……ククク</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>リョウです</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>皆にはアヤって教えてます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あかみね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>アヤです♡（嘘）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>男の娘</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>叫び回ってますね</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>\\きゃーアヤサマー！//</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>動画アップしてますお</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>\\キャーアヤサマー！//</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>出たな黒幕！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ほむほむ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>いいですよ。オフ会、してみたかったんです♡</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>と</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>返信するぜ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>そうです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ニンニク、ニラ、ギンナン……臭い物は嫌いです</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>挨拶しますか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こんにちは〜♡ アヤです♡♡♡（嘘）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>なんやこれww</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>名前覚えれないw<br>名前重要です？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>なんだってー？<br>わしゃ耳が遠くてノー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>佐藤珠緒しか聞き取れませんでした<br>文字でお願いします</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>有名人なのかな？<br>全員知らねえ！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>アーノルド</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>コンボ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>珠緒</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾はさっきアヤです♡って言ったからイイヨネ！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>んお？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>普通に顔出ししててにアヤって名前でやってるのに男なわけなか！（男です）</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>そうなんです。jokerさんが誘ってくださったんです♡</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>遅刻でしょうか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>そうですね。私も喉が渇きました♡</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>いくぜ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>この炒め物、皆さんでどうぞ♡</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>（どういうつもりだjoker……！）</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=68</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>手品するか^^*</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>おい手品をさせろ時間！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>女性？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>殺られる</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>そうです。あなたは？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>兄がなんだって？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>なぬ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私達、jokerさんにオフ会をしようと誘われて集まっているんです。その主催が行方不明だなんて……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>誘われたのっていつでした？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>電話、繋がらないんですか？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ちょw</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>実は孫ですね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>電話も繋がらないんです？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>誘った後に突然オフ会が怖くなって逃げ出したのでは？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>アルバイトですか？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>目に光がない！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>重症ですね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>どういうことですか……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>恨めしそうに見ます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私、ニンニクが大嫌いなんです</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>シッシとします</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>queenに心理学忘れてた……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>皆？</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=14</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=76</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>はあ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>なんやて</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>queenってもういないんです？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>嫌いなんですけど……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>でも、あの人わざわざ嫌いな食べ物を聞いてきたんですよ？💢</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>探すならまず犬鳴峠でしょう？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ところで何故大谷さんはニンニクの電話番号を綾に教えなかったのか……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>まだ水しか飲んでません</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>嫌いと言ってたから……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>電話番号くらいは……</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>教えます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>でも皆さんがタクシーで向かうなら私もタクシーで行きます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>高すぎかwwww</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>大谷さん、ありがとうございます♡</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ふざけやがって！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ギギギギ……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私もついて行きます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerさんの顔って皆知らんとです？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>じゃあ特徴あげて見なかったか聞くこともできないのか……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>賛成です</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>旅館へ向かうぞい</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>１Ｄ100</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾は珠緒さんと</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ちなみに綾が好きになるのは男じゃなくて女です</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ハアハアしながら同室で寝るか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>温泉には行きません^^*</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>です</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=29</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>はいはい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>わかりました。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ないんだよなぁ……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerさんの外見の特徴とか聞きたいです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>可愛らしい外見ですね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>行ったら帰れないんじゃねーのgkbr</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=45</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=84</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>うーん……じゃあ僕も目星かな</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=76</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ははは</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>出目高すぎか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>携帯電話を使います</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ホモか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerてめぇ！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>聞き耳します</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=14</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>成功です</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ニンニクは？</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=56</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1ｄ3</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>なんの音ぞ</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D3=2</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ゴッ<br>ゴッ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ここに私達を連れてきたのはあなた？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>と聞きたいお</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ちょっとこっちに</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>言いくるめて出してもらうか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>出たら死ぬのか！？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>生贄になったら即死亡です？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>信用使えますか</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ぎゃあ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>じゃあ頼りにならなそうな珠緒ちゃんを（ひどい）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>むむむ……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>DEX高いから外出ればにげれるかな</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>言いくるめるか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>タンマ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>言いくるめできます？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>誰に何を……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>珠緒に生贄になるように←</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>どうして私なんですか？^^*</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あ？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>それは皆さん同じですよ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>イラッ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>クソアマw</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あらイケメン</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>待って</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>この人この後重要になったりしない？</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=92</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>おい</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=43</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ひどいwww</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>トラウマw</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=70</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ナディアを思い出す</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D3=2</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=11</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>犬鳴村かな</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerさんの特徴をあげて知っているか聞きます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>生贄にしたの？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>チッ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>牢屋って何ありましたっけ<br>綾も目星しなきゃわかんないです？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>引っかき傷だけ共有？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>（何があったか覚えてない）</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=20</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>軽っw</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=48</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D3=3</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=76</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>ダメボは25からなり</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=4</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>www</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>っょぃ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>部屋目星して何あるか知りたい<br>引っかき傷しか共有してないから……</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=25</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ふぁんぶるみたいじゃないですかー！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>クリったのにそれはないですよjokerさん</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=88</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>www</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>クリティカルで首締めるとかw</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>牢以外の鍵……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あんれま</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>これ縄解いてもらってるの大谷さんだけでそ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>僕のも外してよぅ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>他のはいいから←</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>珠緒はどっかで死んでもらおう</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>とりあえず全員外します</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>忍び歩き</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>ありなとうだわんわん！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>おやふらぁん</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>あ せんかさんおきたよ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あざかさんですね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>隠れるぞい</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>わんわん</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>謎の助っ人…</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=32</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>忍ぶぜ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>男に変装したかった……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>隠しちゃった……</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ごめんね( ´・∀・｀)</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>(´；ω；｀)</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ばーかばーか！！！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾も音を立てて歩きます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>お前を倒して変装する</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>まーしゃる！！</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=98</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ふぁっ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ぎゃあ！！！！！！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こぶし初期値おーけぇ？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>いたい</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=74</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>クッソ</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=58</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>やるなぁ</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D3=2</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D4=4</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>これアーノルドさんいたらめちゃ強かったんじゃ……</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=10</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>玉緒死すべし</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>出目良すぎか</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=14</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=4</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>いたい</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>DM出目良すぎだぞ！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ぐああ！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>大谷さんが死にそうですね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こぶしやで</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>世界一なのに</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=46</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ダメボはいるぜ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>やるなぁ</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D3=1</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>クソ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>へべぇ</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=52</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こぶしダメボなしなのか。。。</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>野生は違うぜ</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D4=2</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerさん</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=85</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾のダメボはなしですか？<br>こぶしってダメボありませんのか？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>完全に忘れられてた(´･_･`)</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>変装99ですよ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>APP18ですよ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>うふふ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>変装します</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>男の服履いで</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>おういぇ</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=71</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>成功です</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=68</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私は敵じゃありませんから攻撃しないでくださいね</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=95</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=34</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=42</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>成功です</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=62</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=16</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>成功で</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>す</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D6=6</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=90</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>素敵</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>村人の姿だからズカズカと前に進んで村人達の話聞けます？</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=12</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=13</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>アヤと呼んだら殴り殺します</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>とりあえず僕も家に</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>誰か村人が来たら追い払いましょう<br>ついて行きます</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=12</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=57</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>家、他に何ありましたっけか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>印ねぇよ……_:(´ `」 ∠):_</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>内容もっかいオナシャス……</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=28</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>賛成です</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=58</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ひぎゃー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>え、待って</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾は焼印ついてないのがバレた時点で優先して殺られるでそ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ここに村人の姿をした奴がいますが……←</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>んー……行動が浮かばない</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ぼくおといれ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>村人って焼印ついてるか確認してきますよね？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>今たまごさんいるのです？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>ねっがーさんが生け贄にされてますよ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>いたわ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>いないよ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>えええええぇ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>変装してるのにぃ！？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ひでぇや</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>骨格変えようぜ！！！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>バキィ……メキィ……</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>イルミぃ！ネェション！！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>DEX16で駆け回るしか……←</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>次行くなら洞窟ですかねー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>他の家って人いるでしょ絶対ぃ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>いいですけど……私音を立ててしまいますよ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>推奨技能は忍び歩きと隠れるとかだったのか……</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=93</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>綾も聞き耳するかね</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=89</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>失敗です</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>キレそう</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=58</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=28</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=95</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ひっでぇぞ！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>開けて飛び込むしかない（）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>開かないんだよなぁ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ウホッ！？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>僕もやるず</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=58</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=7</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ニコ</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=91</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>目星振りますw</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=93</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ねえ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あれ、どの家に入ったんですっけ</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=65</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>掛け軸に目星してそれからそっと捲る</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>嫌いな食べ物聞きましたよね……？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>掛け軸に目星してそれから捲りたいです</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=61</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>捲ります</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ぺらり</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>チッ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>罠だったらjokerをどうしてやろうか……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こいつは本当にjokerか……？(´ω`)</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerに心理学</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>あ、ちよっ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>心理学</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>60</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=90</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>心理学はKP</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ほう……？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>探りますか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>jokerさんはトンネルに行きたくないんですか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>帰りたくないんですか？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>いま途切れて聞こえなかった……ふるふる</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>帰りたいに決まってるじゃないかの前なんて言いました？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>隠してることについて知りたいなあ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>私を騙せると思ってるんですか……？ 何か、隠してるでしょう？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>睨みつけます</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=5</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>テメェ……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>倒せるんですかそいつら……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>やめて</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>ティンダロスは！？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ねえ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>え、ティンダロスとイゴーロナクいるの？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>さたんぴっぐ</dt><dd>アヤ→オオタニ→タマオ→コンボ<br></dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>そしたら僕諦めて死にに行きます(´ω`)</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>さたんぴっぐ</dt><dd>グール×2</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>こぶし</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>がんばれ♡がんばれ♡</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>グールは綾を村人じゃないとわかってるんでしょ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>殴るぜふへへ</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D100=71</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>からぶった</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>大谷</dt><dd>1D100=76</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=82</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=86</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>1D6=3</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>まけん・てぃんだろす</dt><dd>1b100</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>ティンダロスはお帰りください</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>赤嶺 綾</dt><dd>1D6=3</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
