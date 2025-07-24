@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>試食～茂が見たもの～</title><style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style><style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>試食～茂が見たもの～</h1><h2>セッション開始</h2><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>てーすーとーだーよー</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>よしよし</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D1000=942</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>シュブ＝ニグラス</dt><dd>私だ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>Bevel</dt><dd>べべーん</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>ノ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>✋</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>シュブ＝ニグラス</dt><dd>ノ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>お帰りください！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>はじめですん</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>口押さえて震えます（笑ってる）</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>wwww</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>皆知識振るの？</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=5</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=91</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>武道さんかな？？？(^ω^)</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>シメよう</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=45</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=51</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=77</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>イチタリナイ……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>え、知り合いなの？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>と不思議そうに</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>体が小さくなっちゃう</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>音が聞き取れなかった</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あ、聞こえたわ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>どう思うー？ の前くらい？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>現場に行ったらどうかね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>いいね、賛成！ 何か面白い物見つかるかな〜</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じゃあ一緒に行きますか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>すみません、お話いいですか？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>お二人はここに用事があるんですか？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>こういう人にどう話しかければいいのかわからない僕</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>事件の被害者は私のだんななの</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>だんなさんなんですね<br>殺されてしまって残念でした・・・</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>今事件について調べているんです</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>ここでなにを？<br></dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>もちろんです！ね、はじめちゃん！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>実は現場には小さなカードが落ちていたの</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>金藤は後ろで無言でメモ取ってます</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>たしか十二死町二丁目ってかいてあったわ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>たぶるくの調子悪くて入り直してたらアンジェラちゃんにお返事するの忘れちまったぜ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>カードですか？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>そのカードってあのおじいさんが持ってた住所カードじゃないの？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>そうです</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あ・・・そうだね。</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>犯人、おじいちゃんなのかな？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>そのカードって今どこにありますかー？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>さあ？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>と聞きます</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>警察の方々が持って行ってしまったわ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>柳くん可愛いな</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>警察行ったら見せてくれるかな？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>昨日のおじいちゃんについてききたいんですーって</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>どうだろう。見せてくれるかな？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>だめかなあ？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あ、うん</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>受け取ります</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あ！持ってたのね！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あのー、そのカードってこれと同じ物ですか？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>NPC</dt><dd>そうそう、こんな感じのカードよ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>やっぱりおじいちゃんが？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>やっぱりあのおじいさんが関係してるのかな？ 警察行ってみる？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>でも住所のカードあるから家行ってみてもいいかも？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>届けに行こうか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>届けに行くの？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>え、おじいさんに？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ああ、おじいちゃんにかー</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>そう</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>うん、じゃぁ、おじ意ちゃんのところいきましょ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>おじいちゃん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>個人情報だしね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>僕も賛成！ おじいさんの家、気になるしね</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ここかあ・・・</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>門、開いてるね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>鍵開けかな？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>門閉まっているね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>鍵開け振れる？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>振りマース</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=90</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>失敗！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>(´；ω；｀)</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ピンポーン</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>出ないなぁ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>留守かしら</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>え！</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=82</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>僕も振れる？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>聞き耳</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>何も聞こえん</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=5</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おし</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>人の気配しないねー……あっ、鍵開けれたわ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>えええ！</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>笑</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>お邪魔しまーっす</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>不法進入で捕まっても先輩の弁護はしませんからね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ズカズカ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あっ待って待って！</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ちゃぶ台・たんす・布団・家電</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=14</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>しょごす　か　が　く　きょ　う　だ　ん　？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>布団調べます</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>SANチェックですか？？？</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=20</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>成功</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ミュートしとくね･･･（；＿ ＿）</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ねぇねぇ、科学教団だって</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>住所も書いてる</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>この布団猫の毛ついてる。おじいさんって猫なの？ あ、ペットかな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>へー</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ショゴス科学教団ググってみるか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>うん。行ってみる？？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>未来を見つめる精神企業</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>……</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あやしいーーーーーーーーーーー・・・</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ミラバケッソ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>みらばけっそｗｗｗｗｗｗｗｗｗ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>精神企業？<br>先進企業？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>行ってみる？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>いや、その前に………</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>家電も調べさせろゥ！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>なにしてるの？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>この毛、ちょっときになる</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>こら！はじめちゃん！！冷蔵庫は勝手にあけちゃだめよ！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>先輩の弁護はしませんからね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>えー、でも気になるじゃん？ あんこいっぱい入ってたよ。タマ用……ってやっぱり猫飼ってるのかなあのおじいさん</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>たま？？あんこ？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ところで猫ってあんこ食べるの？ 僕わかんないんだけど</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>でも、ねこってあんこ食べられるの？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>タマが猫じゃない可能性もあるかあ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>でも猫の毛あったしなぁ……</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>そうだねー。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>タマって名前のおばあちゃんとかじゃないの？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ネコに、近いなにか？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>いや、おじいさんがタマかもよ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>そりゃねーわ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ああ。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>それは……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>……</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>生活してるの、ここの部屋だけっぽいよね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>壁って何かありますかあ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>どうする？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ショゴ………何とか教団行ってみる？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>科学教団ってなんか気になるよね！ 行こう！！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>行ってみよ！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>(めんどくさいなぁ………)</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>扉目星</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ノックしてみよう</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>うん</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=49</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=58</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=100</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>成功</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ふぁっ！？w</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>100wwwwwwwwwwwww<br></dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>暗いですね</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>聞き耳たてます</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>電気ついてないの？？</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=56</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>成功かな？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>付いていない模様です</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=70</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>またイチタリナイかよ！</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=56</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>中も何も聞こえないし、いないのかなあ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>先輩ドア開けてみたら良いんじゃないですか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>そうだね。開けよう！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>開くかなあ？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>開けようとします</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>開くかな？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あいた！！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>懐中電灯つけます</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>入ろう！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>なんか、研究所？みたいだね？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>散らかってるぅ。。。</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>書類？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>調べるか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>借金で自己破産でもしたのか？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ふらすこ・・・</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=44</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>なんかあやしい。でも使ってなさそう</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=47</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>手記</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>〇月〇日<br>ここに入団してから、３ヶ月経った。<br>ショゴスというものの肉を食えば不老不死になれると聞いて入団したのに<br>一向にショゴスは完成しない。<br><br>〇月〇日<br>本当に科学の力でショゴスは生まれるのだろうか？<br><br>〇月〇日<br>そもそもショゴスとはなんなんだろうか？<br><br>～日付が空いて～<br><br>〇月〇日<br>今日なんと、ショゴスが完成した！と教祖様がおっしゃった。<br>まずは実験台になる人間が必要だ。</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>テケリ・リ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd><br>〇月〇日<br>実験台になる人間は、井畑　茂になった。<br>あいつなら、死んでも誰も悲しまないだろう。<br>明日、あいつに肉を食わせる。<br><br>○月○日<br>やばいやばいやばい。<br>まさかあんなことになるなんて。<br>あんな恐ろしいものがいるこんな町で暮らせない。<br>教祖様に報告すると真っ先に逃げた。<br>俺たちも早く逃げなければ殺される。</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>しょごたん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>……はぁ？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>・・・妄想日記？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>創作にしては悪趣味だ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>先輩</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>しょごすってなんだろ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>カード見せてもらえませんか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あ、うん。はい（渡す）</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>やなぎちゃんどうしたの？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>いや、何だろう<br>名前の記載があったらあのおじいさんの名前も分かるかなって</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>気のせいだと良いんだけど</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ああそっか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あの家、表札とかあったっけ？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あ、見てない</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>見てくる？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>もう一回行ってみようか</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>みてこよっか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じゃあ行こう</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>いこっか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>めんどくさいけどこれも人助けの一環……(ぶつぶつ)</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>いばたさんだ</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あ、はい！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>しげる・・・。</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>いばた、しげる・・・？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ああ</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ボケてるのかなやっぱり</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>GPSって、やなぎちゃんが持ってるからか！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ポケットに入れたままだった</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あれ、持ってたの？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>じゃぁおじいちゃんがいるところわかんないんだ。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ふーん</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>おじいちゃん、さがす？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>あの、ご家族ってどちらにお住まいで？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>井畑さん探しますか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>先輩もそれで良いですか？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>でもどうやって探す？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>まずは交番からでしょう</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>じゃあ交番・・・？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ついてく</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>行きまし</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>シメるか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あの、こないだのおじいちゃん探してるんです</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>どこいっちゃったんだろ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>あいであ？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ききこみってやつね！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>聞き込みだね</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ピンポンしてきいていいのかな？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>任せた</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おじいさんの家の近くって何があったかな</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>近所のおうちまわろっか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>とりあえず向かいの家でも行ったら？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>すみません、赫々然々</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>よく行きそうなところ知りませんか？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>警察ですか？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ゆくえふめい。。。。</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ああ。。。やなぎちゃん・・・(苦笑)</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>他に何かおかしなこととかありませんでしたー？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>それってショゴス科学教団ですか？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>しょごすってやつですか？？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>紙をたべた？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>(メモメモ)</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>神</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ねこじゃなくて･･･やぎになったの？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>髪を食べるとはまた</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>と言って頭を抑えてますね</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ほかに何か知りませんか？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>おはぎ買いに行こうか……</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>行ってみよっか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>商店街の和菓子屋。。・。おはぎって、あんこよね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あんこだね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>お金あげるから先輩達おはぎ買うついでに聞いてきて</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>おはぎおいしそう</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おじいさんについて聞こうか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>もちごめだけ？？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じゃあ食べずに残したあんこがあの冷蔵庫にあったやつなのかな？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>やぎじゃなくて・・・いぬなの？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>(捨てろよ………)</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>じゃあ、おはぎかって行って、うちわでぱたぱたしたら来るかな！？</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ねえ柳くん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>何ですか</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>僕欲しい本があるんだけど（金を握りしめる）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>おはぎ買ったら考えてあげます</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じゃあ買ってくるね！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>これおはぎ置いといたらおじいさん出てこないかな</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>わたしも買うー。おなかすいた！</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>来ないか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>来るなら捕獲しないとね</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>うちわで扇ごう！</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>まだ言う</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>捕まえるならろーぷ？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おじいさんはあんこがあまり好きじゃないんだっけ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>どうする？？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>もち米がすきらしい</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あんこ落としてもち米で釣る？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ちしりつ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>もち米炊いたほうがよかった？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>応急手当は一くんが80持ってる</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>もち米大好きおじいちゃん</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>あんこは落としてタッパーに入れて冷蔵庫かな！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>タマにくれてやる</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>ｗｗｗｗｗｗｗｗ</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>回避用あんこｗｗｗｗｗ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>もち米で釣るとしてもどこに置く？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>ハッ……このおはぎ食べたことがある！ 急に閃いた……ッ！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>わたしもー。なんかなつかしいー（もぐもぐ）</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>もう情報で全部出てるかな？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おじいさんの家族県外だっけ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>タマがなんなのかわかんないのよね</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>タマってあんこ好きなんですかー？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>にゃーん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>アンコッ！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おはぎのあんこタッパーにうつすか</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>おはぎのあんこ剥いでおいたら</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>？？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ぽいぽいっ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>隣に置いとく？w</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>隠れてみてよう！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>じっ……</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ふぁっ！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おじいさんかな？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>・・・・・・！！</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=82</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=35</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>SANが実は40しかない</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D6=2</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>暴力で解決しようとするのが君の悪いところだ怪物ゥ！</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=76</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>くそ！</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D6=2</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D6=3</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>38</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>何アレキモい……</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>今度はなんや！</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>・・・・・・・・・・・・・・</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ふぁあ？</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ゴリ畑さん？</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>なに、あれ。。。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>なんかゴリラが来た………</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>DEX７</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>僕暴力は嫌いだよー（白目）</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>えw</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=1</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=71</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=67</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=3</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>これ見てれば勝手に死ぬんじゃね？</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>怪物⇒じいじ⇒やなぎ⇒はじめ⇒虹子</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=7</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=96</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>見切れた</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>飴食べます</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>えw</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=33</dd></dl><dl class="main" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>お、ラッキー！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>何してんだこいつらw</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>一くんは回復役なんで（後ずさり）</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=39</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=65</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=1</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>柳は完璧探索専門です(震え声)</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=60</dd></dl><dl class="main" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>！！</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=50</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じじいキック</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=91</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=2</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>じゃあ一くんはそのへんで売ってる本で見た適当な呪文を唱えます（効果は何も無い）</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=19</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D3=1</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D3=3</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=73</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=5</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>つえー</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=2</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=3</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>柳くんw</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>癒される味だ</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>アンジェラが戦いに行ったので自分も飴もごもごしながら怪物に近づいてこぶし</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=7</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>チッ！</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D3=3</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>クリティカルがよかった。</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=58</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D100=99</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=95</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>なんだこれww</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D100=77</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=6</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>GM</dt><dd>1D6=1</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>はあはあ……</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=18</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D4=4</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D4=2</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>おいしいとこだけ持ってったww</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>カバンアタック！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>www</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>やめww</dd></dl><dl class="zatsudan" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>88888888888888888888<br></dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D6=4</dd></dl><dl class="main tab_2" style="color: rgb(255, 94, 60);"><dt>高橋虹子</dt><dd>1D6=1</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D6=2</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ありにしよう！</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ね、ね！？</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>金藤 柳</dt><dd>1D100=58</dd></dl><dl class="main tab_2" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>1D100=90</dd></dl><dl class="zatsudan" style="color: rgb(72, 93, 197);"><dt>如月 一</dt><dd>ふぁ</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
