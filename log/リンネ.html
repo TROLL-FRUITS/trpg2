@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>リンネ</title><style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style><style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>リンネ</h1><h2>セッション開始</h2><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1ｄで100面が振れるのだ</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=18</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>コメントしにくい出目やめてくれないかな……（クリが出たらキレる）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ふふw</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>始めてもよかったらいってね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>充電器と格闘してた<br>いつでもいけるぞ〜！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はーい、では導入から。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>あ、あと私知識量少ないから間違ってるところが出てくるかもしれない…と先に行っておくぞ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>どこへ行こうと言うのだね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>僕もEDU1だから大丈夫</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>誤変換はもう、ね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はじめます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>誤変換はご愛嬌</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>魂、それは輪廻転成を繰り返す。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>一生を終え、アートマンは天へ。<br>そして輪廻転生へと。長い、長い時間をかけて。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そして、また別の何かへと生まれ変わり、別の者として新しい一生を迎える。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それを、なんども繰り返す...</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>チリン、チリンという音であなたは目を覚ます。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そこは薄暗く、不気味な空間。<br>周りを見回すと、白くぼんやりと光っている何かがいくつも浮いている。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>というところで、行動開始です。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>…………</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>はぁ、……今度は何……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>とりあえず聞き耳</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>どぞ</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=54</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>優秀ですね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>数値は優秀なんだけどね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>チリンチリンと鈴の音が聞こえますね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>どこから聞こえるかとかは</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>アイデアどうぞん</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=81</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>では、遠くから聞こえてくるのですが、だんだん近づいてきていることに気づけます。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ｼｬﾝｼｬﾝよりは怖くないか……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ここ来る前何してました？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ｼｬﾝｼｬﾝっていうとパンダが出ててきちゃう。<br>普通に寝てましたね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>寝るのも怖い探索者</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>探索者として生まれた運命</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>充電器外れる度にページ更新されてつらい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（鈴の音、近づいてくるな。誰か知らないけど、面だけでも拝んどこうか）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>なんじゃそりゃ辛い</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>周囲に目星をば</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>どうぞー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>僕の充電器繋ぐとバグるし時間遡行するしザ・ワールドするしでもう大変</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=85</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>無能！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>たいへんすぎ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ふふw</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>相変わらず白くぼんやりと光ってるものがあるな〜って思いましたね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>で、ですね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>何かはわからない？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ハ、ハイィ！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>んー、分かんないかな。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>はぁい<br>多分埃や</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>柚葉くんは違和感を感じますね。<br>自分の身体から何かが抜け出そうとしているような、何かが離れていこうとしているような、そんな感覚。<br>そんな異変に驚くでしょう。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>〈SANチェック 0/1〉</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=76</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ビビリか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ふふw w w</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……っ、……何これ、気持ち悪……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そんなところでですね、チリンチリンという鈴の音が近くで聞こえてきますね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>きっと可愛いポケモンだから</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そして、薄暗闇から姿を現しますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>チリーン</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>は現れません。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ゆけ！ クイックボール！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ランタンを手に持ち、腰に掛かった鈴を鳴らしながら歩く、そんな一人の美しい女性が現れますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>女性は柚葉くんの前まで来ると立ち止まりますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>こんばんは</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……はあ？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……こんばんは</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ちょっと睨んでる</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ふふ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>何がおかしいのさ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>…あなたも、どうやら迷い込んでしまったようですね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>迷子になりすぎなんだけど</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>しっかりして永遠の22歳</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>迷い込んだ……って、君は誰？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>永遠の22歳（表だけ）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私は、リンネ<br>ここの管理人</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ふぅん……、俺は緋室 柚葉</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>管理人なら帰る道わかるんじゃないの？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>リンネに目星できる？</dd></dl><dl class="zatsudan"><dt></dt><dd>氷室 柚葉様<br>ええ、帰り道なら知っています</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>あ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>目星はできます！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>しかも変換！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>可愛いなぁｗｗｗｗｗｗｗ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>キレそう(๑･᷄ὢ･᷅๑)</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>緋室 柚葉様<br>ええ、帰り道なら知っています</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>目星ふるぞー！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>どうぞん</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>だったら、教えてよ<br>俺ここのことなんにも知らないの</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=69</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>9見えるとドキッとする</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ええ、もちろんそのつもりで参りました<br>あなたはまだここへ来るべきではない</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>それなら有難いけど……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ランタンを持っていない方の手に鈴を持っていますね。<br>そして、やはりリンネは美しい容姿をしていますね、APP17くらいありそうです。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>18じゃないところがポイント高いですね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい、そしてこれを</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そう言って持っていた鈴を渡しますね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>えっ、……あ、はい</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>クエスチョンマーク浮かべながら受け取ります</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>金色の鈴ですね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>鈴に目星は</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そしてその鈴を受け取ると、先ほど感じていた違和感がスッと消えますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>とくにはないかな。見た感じ普通の鈴です。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ほんほん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>帰るまで、この鈴を離さないように</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ああ、うん。まあ重要な物なんだなってことはよくわかったよ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（ドジって落とさないようにしないと）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい<br>ですが、まぁ帰らなくても良いというのなら止めませんがね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>良いわけない、俺にはまだやることがあるんでね。しっかり持っておきますよ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい、わかりました</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>では、行きましょう</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そう言って、リンネは自分が歩いてきた方向へと歩いて行きますね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（普通に信じて話進めちゃったけど大丈夫だよな……）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>少し後ろから続きます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はぁい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネについていくと大きな空間にたどり着きます。<br>たくさんの棚が置かれ、その上には瓶が置いてあります。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>瓶の中には、先ほど見た白くぼんやりと光っていたものが入っていますね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ここは……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>周囲にキョロキョロっと目星できるかな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>できるぞ〜</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>するぞ〜</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>どうぞ〜</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=77</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>せ、せいこ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>出目が微妙に高い</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>技能値80も少なく感じてきた</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>では、たくさん並べられている瓶の中には何も入っていない空の瓶もありますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それはもう末期</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（……これは、前と似たような展開かな）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>突然、リンネは歩みを止めますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>うわっ、……いきなり止まらないでよ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>何も無いところで転けそうになってます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>申し訳ありません<br>……少しの間、ここで待っててください</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ドジっ子</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>えぇ……？ 別に、良いけど</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>DEX3だから</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ありがとうございます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そう言い、リンネは戻って行きます。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>後ろ姿見送ります</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ふむ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（また迷子が増えたとかじゃないよな……）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>d100振ってみてね</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=87</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ワロタ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>高いなぁ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネが少し駆け足だったことに気づけました。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（急ぎの用事……？）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>いそぎのようじで急ぎの幼児が先頭に出るのはいただけない</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>急ぎの幼児w w w w w</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>と、いう感じでリンネがいなくなり一人ですね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（まあ、ここで待ってろって言われたし……）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ここに留まります<br>棚ってもっと詳しく見れたりしない？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>みれますぞ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>目星かな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>近寄ったら普通に見えるかな。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>無能に優しい<br>じゃあ近寄ります</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>大人しくしてろとは言われてないからね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（探偵の仕事してると、細かいことが気になって仕方が無い）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>（けど無能なので情報が得られない……）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はぁい<br>では、瓶の前にネームプレートが置かれています。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>出目高いから…</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ネームプレート見ていきます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>やっぱり似てるな……前は徳川家康とかいたっけ……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はぁい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>中身が入ってる瓶か、空っぽの瓶か</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>どっちもじゃろ？？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はぁいw</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>じゃあーそうだなー</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D5=5</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>…………、前のことなんて思い出すんじゃなかった。イライラするな……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>くっそ、なぁにが「完璧とは程遠いだ」あのナルシスト野郎……自分だって顔しか取り柄ないくせに……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>誰もいないところで愚痴り出す22歳</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>中身が入った瓶のネームプレートには『日溜 蕾』<br>空っぽの瓶のネームプレートには『泉 さわ』<br>と書いてあります。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>さわちゃーーん！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>一応ほかにも見れます。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ほかにも見るか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ほむ</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D4=4</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……知らない名前ばっかりだ<br>知人だったらまだ法則が分かりそうなものなのに</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そうだなぁ〜…</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>中身が入った瓶のネームプレートには『山田二郎』や『Charlotte・Myers』など<br>空っぽの瓶のネームプレートには『園崎 ゆきの』<br>と書いてあります。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>＞＞　山田二郎　＜＜</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>適当です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>なんだこの、山田太郎を申し訳程度に捻ったような地味な名前……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こいつ失礼だな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>仰る通りだわ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>きっと長男が太郎</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>シャーロット・マイヤーズ、園崎 ゆきの……ねぇ。今まで調査した案件でも見てない名前、か</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>もうちょっとわかりやすいの無いかな……それこそ徳川家康みたいな。それとも俺の予想が外れてる？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……くそ！ 誰が無能だ！ 夜霧のスカポンタン！</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D100=95</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>高いよ</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D100=34</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>では、ここら辺でリンネが戻ってきます。<br>一人の子供を連れてですね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>サッと棚から離れます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>お待たせ致しました</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>おかえり。新しい迷子でも連れて来た？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネさその子供を無理矢理引っ張ってますね。子供はギャーギャー騒いでます。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>子供の方見ます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>りんねは！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>草</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>子供は小学高学年、中学生くらいに見えますね。男の子です。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>チッ……男か……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>子供</dt><dd>はなせー！俺は認めてないし！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>……いいえ、迷子ではなく<br>この子はここに来るべき者です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ああ、そういうこと<br>なんか凄い騒いでるけど</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい、騒がしいですね<br>きっと認めたくないのでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>少年に目星とか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>どうぞー</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D100=54</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年は目に涙を溜めてますね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>(´･ω･`)</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>ちがうし…っ、おれ、おれは…まだ生きてるし…！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>…はぁ、しつこいですね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>あぁ、そうだ<br>緋室様、何か気になることはございました？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>えっ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>突然話振られて驚いてます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネはふふって笑いますね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>気になること、なんて<br>この場所についてとかそれくらいだけど</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まあ……大方予想はつくし、その子の様子を見ればアタリかな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ここは死を迎えた魂が集う場所<br>そして輪廻転生するために通る場所です</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>まぁ、全てだとは言いませんが<br>私も知らないことがあるので</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ふぅん、管理人でも知らないことってあるんだ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>えぇ、<br>この場所に縛り付けられている、ただの管理人ですから</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>少し憐れむように少年を横目で見下ろしてます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そ、君も大変だね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>な、なんだよ……っ<br>あんたも認めろっていうのか…っ！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年は柚葉くんを睨みつけますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ええ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>別に。君の事情なんて俺は知らない。可哀相にって思っただけだよ、ボク</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>うっ……ううっ……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>(´･ω･`)</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年は泣き始めますね。<br>大粒の涙が次々とこぼれていきます。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>認めた方が、楽になると思うのですが</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>やはり、私がおかしいのでしょうか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ま、君はちょっと心無いかもね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>そうでしょうか？自分では前よりはあると思っていたのですが…<br>でも…それに輪廻転生できるだけマシでしょう？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私は、そう思っているだけなのです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>別に悪いこととは言ってないよ。こういう仕事をしてるなら、君はこのままの方がきっと苦労しない</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>苦労……ですか</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネはそう呟いた後、俯きますね。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……この子には、元の世界に置いてきた何かがあるのかもしれない。例えば家族、友達、思い出、夢</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>それらのことを思うと、この子が死を認めたくない気持ちもわかるものだけど。そうやって哀れんだり、心を痛めたりしてちゃここの管理人なんて務まらないでしょ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>…………………………</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>そうですね、緋室様の言う通りです<br>ですが………ですが……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>心理学振ろうかな〜ん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私が、あなた達のような生き方をしていたら、このような運命を辿ることはなかった、って…そう思います</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……と、言うと？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネが少し悲しそうにしてることが分かりますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………私は、あなた方と同じ人間でした</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>な、なんだってー！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>へえ？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>今となっては、なんなのか…自分でも分かりません</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>君は死んでここにいるわけ？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そろそろ少年が泣くのも疲れて退屈そうに指いじり始める頃</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>確かに私は死にました<br>…殺されました</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>どうしてここにいるのかは、分かりません……が、きっと自業自得なのです</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私が人間だった頃にしてきた数々の行い、それに対する罰か何かなのだと思っています</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>大切なところで噛むな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>いや噛んでないか、ん？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>どこ噛んでるの？？？？？？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>噛んでないわ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ふふw</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>何かなので、にがぬけてるとおもって</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>君のことなんて、俺は知らないけど</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>君はどうしたいのさ<br>ここにいたいの、いたくないの？ この場で知らぬ間に与えられた役目を全うしたいの、したくないの、どっちなの</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そろそろ少年が地べたに座り込んで瞑想し始める頃</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年は泣きながらしゃっくりしてます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>しゃくりあげてた</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私の意思など関係ないのです<br>そう思っても、叶うことはない<br>ここに縛り付けられ、輪廻転生もできないのです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>それが、君の思い込みかもしれなくても？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まあ、俺はここのことなんて君に聞いた程度でしか知らないし。君を助けるなんて出来るわけないし、今のところする気もないんだけどね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>……私は</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>生前、沢山の人間の命をこの手で消してきました</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>緋室様のことだって、いっそのことなら殺してしまいたい…そう思ってしまうのです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>怖いね、殺人鬼か何かかな</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……やめときなよ、これ以上業を重ねてどうするの？ そうなれば、君のすべきことは贖いではないの？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>…はい、ご名答です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まあ、今のこの状況こそが、君に課された贖罪なのかもしれないけど</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>実際殺人鬼の犯行を知ってて黙認して来たから人のこと言えない奴</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ですが、それは不可能な事。抑えられているのです、管理人ですから<br>私がそう思ってしまう限り、きっとここからは解き放たれることもないと思います</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私は、贖罪しなければならない</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>それに自分でもわかっております<br>私は沢山の人間の人生を終わらせた、だから</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>今度私がするべきことは、人間の新しい人生を導くことなのでしょう</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私の願いを言っても良いのなら……<br>私はそうでありたい、それだけなのです</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そう言って黙りますね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年はしゃくりをあげながら二人の顔を交互に見てます。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>輪廻転生の為の通り道、だっけ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>なら、やっぱりこのままで良いじゃないか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>君がここから解放される時が来るのなら、それこそ君が赦された時だ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>少年の頭を乱暴に撫でます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年はなんだよー＞＜ってなってます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>かわゆす</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………ふふっ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>私は、今の私の役目を全うし…<br>そしてきっと解放してみせます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>なんか言ってることがおかしいけど気が動転してるんだと思う</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>可愛いね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そ、じゃあ応援しててあげる</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>感謝しなよね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>ええ、感謝します<br>ありがとうございます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>……緋室様がここにきてくれてよかった<br>あなたにとっては迷惑なことかもしれませんが</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……ああ迷惑だよ、本当にね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>皮肉っぽく笑います</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネは下手っぴな笑顔を見せますね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>可愛い</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>可愛いしか言ってないような……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>では、私のわがままで引き止めるわけにもいきません<br>さぁ、今度こそ帰りましょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>よろしく<br>その子も導いてあげないとね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>…なぁ、にーちゃん</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>なにさ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>『俺』の人生は終わっちゃったけど、新しい『俺』の人生が始まったら、俺…<br>にーちゃんみたいなカッコいい大人になりたい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>今はこんなに泣いててカッコ悪いし……<br>くーる？な人？みたいな、そんな大人になりたい！<br></dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ま、まあ好きにすれば？<br>でもあんまりやり過ぎると無愛想って叩かれるから気をつけると良いよ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>？<br>よく分かんないけどわかった！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>視線高めに顔逸らしてます<br>こんなふうに言われることってないからにやけが隠せてない22歳</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年は目を輝かせて柚葉くんを見てますね。<br>リンネはその様子を見て、ふふって笑ってます。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>君、次は長生きしなよね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>では…行きましょうか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>はいはい</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>少年</dt><dd>もちろん！俺、頑張るよ！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そういうとリンネは先へ進んで行きますね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>もっかい少年の頭わしゃわしゃってやってからリンネに続きます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>少年もついて行きますね。<br>リンネは先へ進んで行き、空間のずっと奥にあった扉の前で止まります。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そして扉を開けますね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>扉の先は白い光に満たされているように見えます。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>この先を進んでいけば、緋室様は帰ることができます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>案内どうも、お勤めご苦労様</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい<br>……そうだ、少し鈴を貸してもらってもいいですか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>……？ 良いけど</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>差し出します</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>では、リンネはそのまま鈴を持っている方の手を握りますね。<br>そしてすぐに手を離します。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>これは、お礼とお詫びです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>別に、まあ、……どういたしまして</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>目逸らしてます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>はい<br>…では、進んでください…扉の向こうへ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ん、じゃあ……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ま、せいぜい頑張りなよ、リンネ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>それだけ言って手ひらひらさせながら扉の奥に進みます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>はぁい、では進んで行きますね〜。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>扉の先へと進み、白く優しい光に包まれあなたは眠るように意識を失いますね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>なんかおかしいけど気にしない…</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>大丈夫大丈夫w</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>………私はきっと、役目を全うしてみせます</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>リンネ</dt><dd>……あなたに、幸あらんことを</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>目を覚ますと、いつも寝ている場所で横になっていました。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>夢を見ていたのか、とそう思うでしょう。<br>しかし自分の手を見ると、自分の瞳と同じ色の鈴が握られていた。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それは、夢ではなかったという何よりの証拠になるでしょう。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>True end.『リンネ』</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>シナリオクリアです！お疲れ様でした…！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>お疲れ様でした〜！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こりんちゃんのRP好きです（告白）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>長引かなくてよかったぜ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>良い感じの時間ですな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>私はトロルちゃんのRPが好きです。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>照れる</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>瞳の色ってことは柚葉色ですね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>とりあえず報酬〜<br>1ｄ6のSAN回復…かな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>鈴は柚葉くん色です</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それと鈴はAFです。</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1D6=2</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>くそ！！！</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>あら〜</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>まぁ黒字でそ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>1黒字。充分だね</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>リンネちゃん可愛かった<br>トロちゃん敬語に弱いねん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>AF『リンネの鈴』<br>あなたの瞳と同じ色の鈴。幸運+5%です。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>やったぜ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネね〜</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>タイトル迷いすぎてそのまんまつけちゃったんだよな。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ふふw</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>トロちゃんタイトル考えるの苦手</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>リンネと輪廻</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>私も苦手</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>思いつかなくて単語漁り始めて結局思いつかない</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>瓶のやつって何だったん？（予想はしてるけど間違ってたら恥ずかしいから聞く）</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>瓶に入ってたもの？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そそ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>魂ですね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まあそうよね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>あれは死亡した時、死期が近い人の瓶が置いてあるんだよね。だからゆきのもおいてあった。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>時？人な。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>徳川家康は……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>さわちゃんゆきのちゃん好きです</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>まぁもう輪廻転成してるでしょうしないんじゃないかな？</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>へんかん！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>家康なんていなかったんや</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>柚葉くん初卓で似たような体験してるんだよね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>発言で聞いてアッてなった</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>柚葉くんすきです。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まああれは<br>貴方死にます！ 死にたくなかったら異世界で寿命伸ばして来てください！ って感じのやつだけど</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>うっかりランタンに火灯して不老になった柚葉くんです。全部jokerさんのせい</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>普通の卓でまた共演しようね♡</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>さわの魂がないのは、転生もせずに成宮くんのところにいるからですね。最初はあったんだけど、気が付いたら勝手にいなくなってましたっていうことにしてる。<br>ゆきのはまぁ魂取られてるからね。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ランタンー！<br>共演すゆ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>前に私が夜中にjokerさんに呼び出されたことあったじゃん</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>うん</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>柚葉くんが参加した、そのシナリオ纏めたものの確認をするためだったんだよね。ちゃんと分かるか〜みたいな。</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>公開するようのね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ああ、あれね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>夜中に呼び出されたからビビりました</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>唐突に声かけてくるからな</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ぽんさんと卓やってたら突然Skypeに追加されたこともあったわ<br>通知でビビるわ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ビビらせてばかりじゃないか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こりん卓で子供って言われるとさ</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>うん</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>なんか皆見た目が新谷くんでイメージされるんだよね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>新谷濃くてごめん</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こりん卓の看板ニャルだしまあ……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>まぁ……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>やっぱり1対1だと好きなだけRPできるから良いな</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>NPC1人に対してPL複数だと大抵その中の1人しか会話できないしね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そうだね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そうしたらこれは一対一でやったのが正解だったね。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>最近難易度高めのあざ卓で気張ってたから解れる〜〜</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>せやね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それは良かった〜</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>これはソロシナリオが良い</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こりん卓好きなので<br>またできたらDM凸って良いから誘ってね/////</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>なんかソロシナリオばっかりになってしまうな</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そうする////</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>楽しいから良いんや<br>小鳩市も百貨店もリンネも楽しいから良いんや</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>うれしいヽ(；▽；)ノ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>リンネのスリーサイズも知りたいけどもう2時近いから落ちないといかんね……(´･ω･`)</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>まあ僕はどうせ5時まで起きるけどね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>スリーサイズは流石に決めてないです（）<br>今日は入試とかそういうので学校は休みなのだ。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>そういえばもうそんな時期か</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>そんな時期だよ全くやんなっちゃうわ。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>なら夜更かしし放題だね！<br>スリーサイズは良いからカップだけでも（変態）</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>入試とか無縁すぎて……</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>うーん</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D2=2</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D100=87</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>1D2=1</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>結局Cになるか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>Cが丁度良い感じある</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ダイス神もそういった</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ダイス神は気が合うな<br>ジャストサイズBカップ派の鮮華さんは異端ってことで</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>柚葉くんはもうこりん宅と仲良くする気満々なんで宜しくお願いします＾〜〜</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>知らないところで異端呼ばわりされて草</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>よろしくお願いします〜＾＾</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>リンネってちゃんと名前呼んだの最後だけっていう</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>思いっきりツンデレできるの楽しみにしてるから</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>それがなんかぐっときた。<br>ツンデレ楽しみです。可愛いばっかり言いそう。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>こりん宅は基本可愛いので僕も可愛いで返しますね</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ログが可愛いの発言だらけに</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>ログ伸ばす勢い</dd></dl><dl class="main" style="color: rgb(0, 119, 112);"><dt>GM</dt><dd>ふふw w w<br>じゃあそろそろ解散しよっか！お疲れ様でしたー！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>緋室 柚葉</dt><dd>はーいお疲れ様でした！<br>楽しかったです、ありがとう〜！</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
