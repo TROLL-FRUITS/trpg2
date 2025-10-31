@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><head><script>
+    if (!window.location.href.includes('forceReloaded')) {
+      const sep = window.location.href.includes('?') ? '&' : '?';
+      window.location.href = window.location.href + sep + 'forceReloaded=1';
+    }
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>壁の中にいる</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style>
+<style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>壁の中にいる</h1><h2>セッション開始</h2><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>てすてす</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=52</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=80</dd></dl><dl class="main tab_2" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>1D100=67</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>どっこらせ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>難易度は低め<br>戦闘は基本起きません<br>探索中心シナリオ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>送信されぬ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あ、できた<br>りょーかいでっす</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>BGMは各自で/////</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ラジオ体操第2ダウンロードしました////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ラジオ体操ww</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>タイマン怖いからラジオ体操のおじさんの声聞かないと安心できない＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>タイマン怖いよね<br>僕もぽんさんと昨日からタイマンシナリオやってるんだけど緊張がやばかった</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>昨日言ってたあれか:;(∩´﹏`∩);:</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そそ、一くん一人で頑張ってるなうぅ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なにそれ不安</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>でもRP楽しいからすぴかちゃんも今度やるとき楽しめるはずぅ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>楽しみ*.＼('ω')／.*</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>さてさて、あと３分待つのも面倒だし導入行っちゃいます？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>２分だったぞ？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>そっすねー</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はいほい！<br>ではでは</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>どきどきのたいけつ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>『壁の中にいる』始めて行きましょう！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>いえーい！！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>えー、結衣子ちゃんは下校中です。<br>部活とか委員会とかで遅くなり、もう当たりは真っ暗です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>辺りね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>下校なう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>一人寂しく歩いている……と思ったのですが、何故か後ろから足音が……っ！？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>まさか……尾行されている！？<br>と思いますね</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>(結衣子の後ろに…だと…？！ 何者だっ…！！)</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>太字ｨ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>主張激しい系女子高生</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>振り向きますか？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>いえーす</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ほいほい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>えー振り向きますとね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そこには黒いフードをかぶった人影が佇んでいます</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>まっくろくろすけ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>その人物は次の瞬間、結衣子ちゃんの目の前までシュッと移動してきます</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>？！(こいつ…できる…！)</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>結衣子は何者なんだ。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>その瞬間、結衣子ちゃんは足が地面に縫い付けられたように動けなくなりますね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃん人外？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ダークマター生み出せる人間＞＜</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>喋るのもできなくなるのかな</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>喋るのはできるけど、まあそんな暇ないよね<br>その人物がフードを脱ぎ、中身が顕になるのですが、それが何か確認する前に結衣子ちゃんの視界は暗転します</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>( ˘ω˘ ) ｽﾔｧ…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>次に目を覚ますとそこは暗闇であり、周りに何があるのかは認識できない。ただ理解できない事態に、言い知れない不安が自分の中からせりあがってくるのがわかる。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>身動きしようとしたところで探索者は、その場所が異様に左右に狭いことに気付く。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>探索者って言っちゃったけど許せ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>絶対壁の中やんけ！</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>せ、狭いですぅ…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そう、まるでここが空間と空間の、ほんの狭い隙間のように。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>――――壁の中にいる。そんなフレーズが探索者の頭の中をよぎった。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>また探索者って言っちゃったけど許せ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>仕方ない許してやろう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>さて、結衣子ちゃんはどうするかな</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>左右の壁を叩いてみます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ちと待ってね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ほい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい、壁は硬いですね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ふむむ、じゃあ前に進めたりできます？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい。前にも後ろにも進めることがわかるでしょう</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>後ろも行けるのか、まあまずは前から進みます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>すると、ばさばさという羽音が聞こえてきます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>少し進んだところでね</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>とりさん…？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ピヨィ、ピヨィという鳴き声も聞こえます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>知識の半分でどうぞ</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=15</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>素晴らしい</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>よゆー！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ではそれがヨタカという鳥の鳴き声だとわかります</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカってどんな鳥なんだろ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>夜行性ってことしか書いてない/////</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>じゃあ暗いらしいし今活発なのかな///</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥は鳴きながら結衣子の肩に止まります</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイピョイ</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>結衣子このとりさん知ってますぅ、ヨタカさんです〜</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なでなでします</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイピョイ〜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>嬉しそうです</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>仲間が増えたぜ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>やったぜ！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>じゃあヨタカさんともっと前に進みます。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんが鳥と一緒にしばらく進むと、段差で転びますね</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ふええっ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさぁん！逃げないで！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>壁のようなところに顔を打ち付けます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ダメージ1d2です/////</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>い、痛いです…</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D2=2</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイィ……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥は心配そうに鳴いてます</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なぜ更新されないんだ！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>どうやら目の前に結衣子ちゃんと同じくらいの高さの台のようなものがあるみたいです。先ほど顔を打ち付けたのは壁ではなくこの台だったようですね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさんはにげてないのね。<br>台に何があるかとか手探りでわかります？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥は再び結衣子ちゃんの肩に止まってますね</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさんびっくりしましたねぇ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんが台をさわさわすると、台の上に手のひらくらいの大きさの四角い物があることに気づくでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイィ</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なんですかぁ？これ……るーびっくきゅーぶ？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>間近で見てもよく分かりませんか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>触れると、まるで嫌なものをみてしまったような感覚に陥ります。四角い物自体はひんやりとした陶器のような冷たさを持っていますね&nbsp;</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>わかりませんなぁ</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ひんやり…</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>そうだ、荷物は？持ってます？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>持ってますね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>じゃあスマホのライトをつけます。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>だがしかし、な、なんてことだ電源が切れているッ……！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>CoC七不思議の一つ！</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>スマホさん…壊れてしまいました…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ﾋﾟｮｲ……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>スマホとその四角いやつをショルダーバッグに入れます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>台飛び越えて向こうに行けます？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>飛び越えるというか乗り越えるというか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>その前に</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>四角い物を持ち上げようとするとですね、</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイーーーーッ！</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>？！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>静かにしなさい！びっくりするでしょ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥が警告するようにけたたましく鳴き、それから結衣子ちゃんは腕にのしかかるような羽毛の感触と重みを感じます</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>え、それってヨタカさんの羽毛ですよね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>この四角い物を持つことは許さないというように、小鳥は四角い物の上に乗ってしまったようです。そのせいか四角い物は持ちあがりません。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なるほど</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ですな</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさん、持っていっちゃだめなんですかぁ？…じゃあ置いていきましょ〜</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>四角いのは諦めます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>諦めるのか！<br>これを、諦めるのかーっ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい、諦めましたね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>諦めないとヨタカさん攻撃してきそうじゃん＞＜警告怖い！</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさん、前に進みましょ〜？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんが諦めた様子で手を離すと、鳥はホッとしたように四角い物から離れますね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>DEX対抗行きます……？^^</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あ、だいじょぶです^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ふええ(＞＜)</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイ♪</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なんか必要になりそうならヨタカさん投げ飛ばして取る^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい、台は頑張れば飛び越えることができそうです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>投げ飛ばww</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>飛び越えるん</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>跳躍どうぞ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>初期値っていくつでしただけ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>でしただけ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>25だぁ！</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=36</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>^^</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>したくぐり抜けれますか＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>悲しいことに飛び越えることはできませんでした。下は隙間すらありませんね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>足でトントンやっても台があるだけです</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>結衣子…ジャンプ苦手です…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ピョイィ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥もしょんぼりしています</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>くそ！！覚えてろよ！！後ろ行くもん！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はいw</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>最初いたところよりもずっと後ろまで行きますか？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>はい、最初のとこより後ろに行きます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>最初にいた場所から後ろへとしばらく突き進むと、結衣子ちゃんは前方から少し不穏な空気を感じ取ります</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさんの様子は？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥は不安げに鳴いています</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>鳥</dt><dd>ﾋﾟｮｲﾋﾟｮｲ……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>もう少し近づいてみますか？</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>よ、ヨタカさん…結衣子、なんかあっち怖いです…</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ゆっくり近づきます＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>戦闘ほぼなしらしいけど結衣子の行動次第だから怖い。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>するとですね、</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>不安げに鳴いていた鳥の声が、一瞬のうちに何かに遮られたようにして、消えます</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ええ、肩触ってヨタカさんいるかどうか確かめます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>代わりに聞こえるのは何かがゴキンと折れる音。音からして硬いであろうそれを、音を起こしている主はものともせぬ力で、ボキン、ゴキンと折りつづけている。そこに紛れてペッチャ……ヌッチャ……と粘性のあるような水音がします。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>肩に鳥はいませんね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あああああよたかさあああああんんんん</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>アイデアどうぞ</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>…</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=69</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>アイデア75</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>アイデアはどっちかわからんよぉ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんは、鳥が『何か』によって残虐に殺され、その水音は鳥を『何か』が食している音なのだと気づきます。その場から早く去らなければという念に襲われるでしょう。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>鳥が死んだことを理解します。<br>SANチェック〈0/1d2〉</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=46</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>0かな</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>成功…何かがいる方を向きながら後退します</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい。相変わらず何も見えません。<br>しばらくして鳥が食される音は聞こえなくなります。結衣子ちゃんはもうここに近寄らない方が良いだろうと思いますね</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさん……うう……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>さっきの台のところにいくしかないよね…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>かーなーしーみのー……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>台のところに行きますか？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>むこーへとー…</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>いきます…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい。台があり、上には四角い物があります。それを手に取ろうとするあなたの邪魔をするものはもういないでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>回収しますか？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさん、脱出させようとしてくれてるのか、させないようにしてるのかわからんなぁ…<br>手に取ろう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい、結衣子ちゃんが四角い物を手に取ると、コトリと音がして、台が消えますね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカてめぇ！！！ゆるさねぇ！！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>台が消えたことに気づいた結衣子ちゃんは不可思議な現象に驚く、あるいは恐怖するでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>SANチェックです</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>〈0/1〉</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=68</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>1の減少ですね^^</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>これ、ヨタカさん振りほどいて取った方がよかったんか…</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>びっくりしましたぁ…でもこれで前に進めますね…</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>進むぜっ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>台があった先の道に足を踏み出した結衣子ちゃんは、今までとは違ってぬるりとした感覚を床におぼえる。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>幸運どうぞ</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=77</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>^^</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>幸運低いんだよおおお</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんはコケます。1ダメージ</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ぐへぇっ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>こいつ転んで死ぬんじゃ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>先に進みますか？ 戻りますか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>まあ戻ってもなんもないけどね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>進むしかない…一応手に四角いの持ってるんですよね？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>持ってますね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>こいつなくしかねないからショルダーバッグにしまいます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はいw</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>進むぜ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はいはい！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>更に進むと、結衣子ちゃんは硬い壁に突き当たります。そして取っ手のようなものが壁から突出していることに気付くでしょう。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>取っ手握ってみます</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>金属のように冷たく、少しザラザラしています</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なんでしょー？これぇ…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>左右に少し回せることにも気づくでしょう</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ドアノブか</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>右に回してみるん</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ガチャガチャと音がします</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>左も回します</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ガチャガチャ……ハッ！<br>これドアノブじゃねっと気づきます</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>回しながら押すぜ！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい、開きません</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>押してダメなら引いてみろ！！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>開きました</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>開いた〜わぁい！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>扉の向こうは…？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんが扉を開くと、青い光が差し込み、音がなだれ込みます。あなたは急な光に目をつむるでしょう。その時に認識するのは激しい雨音。それから薄らゆっくりと目を開けたあなたの視界には、鬱蒼とした草木が映ることでしょう。どうやら森の中のようです。空はオーロラめいた青白い光に照らされ、青い霧が濃く広がっています。</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>げんそ〜てき…</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>恐る恐る入ります</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>扉から外へ出る、あなたの身を打つ水の感触は生々しい。扉から手を離した時点で扉は音をたててひとりでに閉まり、閉まりきった瞬間はじめからなかったかのように跡形もなく消え失せます。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あらぁ、風邪引くと嫌だから日傘さします</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>それを確認してしまったあなたはSANチェックです☆</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>〈1/1d2〉</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=95</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あっぶ</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D2=2</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんは日傘をさしながらプルプルしてます</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>と、扉がぁ……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>もう暗闇の中へ戻ることはできない。空の色が一層明るくなり、オーロラのような波形がゆらゆらと不思議な動きをします。まるで海の揺らめきを見ているかのようだ。そのうちあまりの明るさに目をあけていられなくなり、あなたの意識は暗転します。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>聞き耳推奨なのに聞き耳使ってないから聞き耳振ります</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なんやねーんすやぁ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>聞き耳振っても雨音だけ/////</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>次に目覚めるとそこは自室のベッドであり、あなたの服はぐっしょりと濡れている。</dd></dl><dl class="main" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>汗かきましたぁ^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>その後あなたの身にはとくに何もなく、あなたは日常生活に戻ることになります。　あなたとしては、その出来事は悪い夢だったと思うほかないでしょう。たとえあの生々しい感覚を思い出したとして、到底現実とは肯定しがたい体験です。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>のーまるえんどぅ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>転んだところは痛むけれど、あなたはベッドにぶつけたのだろうと解釈するでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>のーまるえんどぅ〜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>あ、そうだ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ベッドで3ダメとか寝相悪い</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ほい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>箱をお持ち帰りしたわけですが、見ますか？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>見よう！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ショルダーバッグガサゴソしてたらハケーンしたことにしよう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>はい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>見つけた四角い物……箱を調べると、非常に軽く、中が空洞になっていることが容易にわかります。そして、少し指がひっかけられるようにへこんでいる部分を発見できますね。ここに指を引っ掛けることで箱は容易に開くでしょう。</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>開けゴマ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>開けると、折りたたまれたメモを発見します</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>メモ見るよ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>メモを広げると緑のインクの小さな文字でびっしり埋められています。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>母国語どーぞ！</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=75</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>母国語失敗なんてするわけ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ﾅｶﾅｲﾃﾞ……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>では結衣子ちゃんはそれを読むことができませんでした……</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>魔術ゲットのチャンスが……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>結衣子あほやん…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>さーてクリア報酬のお時間です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>・最後までプレイした<br>　１ｄ６の正気度回復<br><br>・箱を持ったまま生存脱出<br>　１ｄ２の正気度回復<br></dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D6=5</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D2=1</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>わーい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ここ母国語に成功すると魔術覚えられるんだけど覚えたい？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>覚えたい…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>覚えたければあと２回チャンスをやろう<br>あの後も何度か読もうとしたってことで</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>母国語どうぞぅ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>やさしい…</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D100=61</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>報酬少ないからねぇ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>おや！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>これは成功かな？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>どうだっけ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>どうだっけ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>成功だね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>よかった…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>EDU×5だから、初期値は知識と同じ値</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そこには呪文『門の創造』(ルルブP.289,290)に関する記述がされていることがわかり、1d3の正気度を消失する。また≪クトゥルフ神話≫技能を+2%する。この呪文を習得する場合2d6＋10週間を必要とする。</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>コロコロタイムです</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ティンダロスの…わんわん…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>わんわん</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>2D6+10=17</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>17週間後＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>17週間で習得できるでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>長いねw</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>SAN減少も忘れずにね/////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>神話技能も＋2です</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>はーい</dd></dl><dl class="main tab_2" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>1D3=3</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>結局元に戻りました</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>わあ^^</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ではシナリオ解説をしましょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>サイトにのってるのそのまま貼るね/////</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>はーい///</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>狂信者に拉致られて探索者はあそこにいた。君が探索していた壁や床には無形の落とし子がびっしりと張り付いていて、あの不穏な壁はツァトゥグアの腹だよ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>これ、いつの話なんだろう</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>壁トントンしちゃったよおおお</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ヨタカはツァトゥグアに食べられました</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>勝てないやんけ！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ツァトゥグアの腹触るとモフモフします</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>モフモフし続けたら戦闘入ってた？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>入らないけど</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>けど</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>刃物とかで攻撃すると</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>腕ごと腹にめり込んでいって</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>抵抗しないでいるとキャラロストだね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ふええ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさん振りほどいて四角いの取って帰るとどうなってました？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ヨタカさんと一緒に生還です^^</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>ヨタカさんも目覚めた時いたのかな？？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>跳躍で帰っても一緒に生還です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ヨタカさんは癒し要員です</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>死んだけど</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>寧ろSAN減らしに来ようとしてた</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>実際跳躍して帰ったほうが変なものに手を出さなくて済むしでヨタカさん的にもそれが一番幸せだったんだけどね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>魔術に手を出させたくなかったんかね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>でも魔術って覚えたいじゃん！ せっかく覚えれるなら覚えさせたいじゃん！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>結衣子ちゃんはすぴかちゃんちで初めての魔術持ち探索者かな！ おめでとう！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>実はれいくん、初シナリオで手に入れてるのだよ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ﾅﾝﾀﾞﾄ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ハッ……まさかプリンの……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>プリン…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>アンサタ……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>じゅう…うっ頭がっ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そういえば異端者でもあったぬぁ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>門の創造っていつのシナリオから使えるんだろ( ˘ω˘ ) ｽﾔｧ…</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>これは終了後にPLがもやもやするシナリオだから、気になることあれば『壁の中にいる シナリオ』で検索だお☆</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>17週間後……<br>そのへんはその時のKPに聞くべきかなぁ</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>調べるっ＞＜</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>とりあえずスタートは4月11日にしといてね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>はぁい</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>そこから17週間後になればどの卓でも使えるでしょう</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>それまでに死んだら意味無いけど/////</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>やめてぇ！結衣子はNPCにマカロンを食べてもらうまで死ねないの！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>いやぁ<br>すぐ終わるシナリオってこれくらいしか知らなかったんだけど、本当にすぐ終わったな</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>謎解き要素がほぼないからね</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>やめろ死人が出る！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>前か後ろか、だからねぇ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>使われなかった推奨技能</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あれって毒として判定されるんだろうか</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>まあ使わなくてもクリアできるからね/////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>毒？</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あれいつ使えたの////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>マカロンかw</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>あれはいつでも使えたよ！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>体に絶対に悪いけど死ぬまでは行かないだろうからNPCをトイレに追いやることが出来る品物</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>使ったらツァトゥグァの声が聞こえたとか？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>聞こえません/////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>詠唱してる声とかが一部だけ聞こえたかもね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>推奨技能とは</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>推奨技能なんてなかったんや（）</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>探索中心シナリオなのに目星ではなく聞き耳が推奨されてるってことから変なのーって思わせるためだけのものかな</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>なるほど、でも壁の中にいるって聞いたら暗いって想像しちゃう////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>まあね/////</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>まあ正しくは<br>無形の落とし子たちが周囲に大量にはりついており、光が一切さえぎられた空間だけどね</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>無形の落とし子めっちゃ触っちゃった</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>転んでたから多分キッスもしてる</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あああああ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ｗｗｗｗｗｗｗ<br>さて、このへんでお開きにしましょか<br>次のセッションは日曜日！ 誰連れてくるか楽しみにしてるね！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>無事に生きて帰れるといいね……<br>クスクス……</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>あっあっこわいよぉ</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>（前回全員生還しました）</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>草</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>笑うな！<br>ではではお疲れ様でしたぁ！</dd></dl><dl class="zatsudan" style="color: rgb(234, 94, 113);"><dt>館井 結衣子</dt><dd>お疲れっした！</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>GM</dt><dd>ブツッ……ツー、ツー、ツー……</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
