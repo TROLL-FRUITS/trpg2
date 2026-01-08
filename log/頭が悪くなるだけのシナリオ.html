@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><head><script>
+    if (!window.location.href.includes('forceReloaded')) {
+      const sep = window.location.href.includes('?') ? '&' : '?';
+      window.location.href = window.location.href + sep + 'forceReloaded=1';
+    }
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>頭が悪くなるだけのシナリオ</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #CD0000;
+}
+
+h1 {
+  font-size: 21px;
+  color: #666666;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666666;
+  margin: 5px;
+  padding: 50px 0 0 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+label {
+  transition: all 0.2s;
+}
+
+#toggle {
+  display: none;
+}
+
+#label_toggle {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #CD0000;
+  background-color: #FFFFFF;
+  color: #CD0000;
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1005;
+}
+
+#label_toggle:hover {
+  background-color: #CD0000;
+  color: #FFFFFF;
+}
+
+header {
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.2s;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+#toggle:checked+header {
+  width: 200px;
+}
+
+header label {
+  display: block;
+  width: 180px;
+  margin: 0 5px;
+  padding: 5px;
+  border-bottom: 1px dotted #EFEFEF;
+}
+
+header label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: #EFEFEF;
+}
+
+.wrapper {
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 1100px;
+  padding: 30px 15px 100px 15px;
+  margin: 0 AUTO;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+/* ログ部分 */
+dl {
+  display: block;
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+dl::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+dt {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  width: 110px;
+  margin: 0;
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+dd {
+  display: block;
+  width: calc(100% - 140px);
+  margin: 0;
+  padding: 2px;
+  float: right;
+  line-height: 1.8em;
+}
+
+.zatsudan {
+  width: 85%;
+  margin: 0 0 0 AUTO;
+  background: #f7f7f7;
+  border-left: 1px solid #CCCCCC;
+}
+
+.other {
+  background-color: #fff7ef;
+}
+
+.secret {
+  width: 98%;
+  margin: 0 0 0 AUTO;
+  border-left: 3px solid #CCCCCC;
+}
+
+.group {
+  background: #f9f9f9;
+  border-left: 1px solid #CCCCCC;
+}
+
+@media (max-width:480px) {
+  dt {
+    display: inline-block;
+    float: none;
+    width: calc(100% - 6px);
+    margin: 0;
+    padding: 3px 0 0 3px;
+    text-align: left;
+  }
+  dd {
+    display: inline-block;
+    width: calc(100% - 6px);
+    padding: 3px;
+    float: none;
+  }
+}
+</style>
+<style>
+.tab_0 {
+  background-color: #fffddf;
+  border-color: #cd2b2b;
+  width: 85%;
+  margin: 0 0 0 AUTO;
+}
+
+.tab_0.selected {
+  display: none;
+}
+
+.tab_1 {
+  background-color: #ffdfea;
+  border-color: #E91E63;
+}
+
+.tab_1.selected {
+  display: none;
+}
+
+.tab_2 {
+  background-color: #ebf7ff;
+  border-color: #63b7ff;
+}
+
+.tab_2.selected {
+  display: none;
+}
+
+.tab_3 {
+  background-color: #f1ffea;
+  border-color: #8ed92b;
+}
+
+.tab_3.selected {
+  display: none;
+}
+</style><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+<style>* { font-family: sans-serif !important; }</style>
+<script src="norobot.js"></script>
+<script>if (!window.location.href.includes("forceReloaded")) { const sep = window.location.href.includes("?") ? "&" : "?"; window.location.href = window.location.href + sep + "forceReloaded=1"; }</script>
+</head><body><label for="toggle" id="label_toggle">表示/非表示</label><input type="checkbox" id="toggle"><header><label>▽ 非表示にするタブ</label><label for="main"><input type="checkbox" onclick="Hide(this)" id="main">発言</label><label for="zatsudan"><input type="checkbox" onclick="Hide(this)" id="zatsudan">ノーマル</label></header><div class="wrapper"><h1>頭が悪くなるだけのシナリオ</h1><h2>セッション開始</h2><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>1dで1d100がふれたきがするなぁ</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>ぽてと</dt><dd>1D100=37</dd></dl><dl class="main tab_2" style="color: rgb(0, 119, 112);"><dt>フライドポテト（M）</dt><dd>1D100=64</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>1D100=54</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>みんな準備いいかな</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>(　´∀｀)bｸﾞｯ!</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>( Ꙭ)✧‧˚☪︎⋆｡˚✩</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>なんかしじみがいるんだけど</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>しじみ</dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=31</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>あさり</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>はまぐり</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>たにし</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>はじめます</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ちょっと待て！</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>おわります</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>お疲れ様でした</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>待ってたら終わりました<br>お疲れ様でした</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>お疲れ様でした〜</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>おつかれさまでした</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>おやすみなさい</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>準備できたって言いにくいこの状況</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>はじめようぜ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>導入いきます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>気付いたら知らないお部屋にいる。<br>なんでか何も思い出せないなぁ。<br>あ、ここから出たい。うへぇ。<br><br>なんか制限時間がある気がする。<br>20分くらい。<br>それとなんか能力値と技能値も半分の値になったなぁ。まあいいかぁ。<br>リンゴ見てバナナっていうくらいにはみんな馬鹿になったなぁ。</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>半分……だと……！？</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>INT1じゃないのか……</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>部屋の中には『扉』『本棚』『机』『ベット』『おもちゃ箱』があるぅ。<br>あ、タイマー押した。ばななおいしい。</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>雛子だったら4じゃんw<br>あってたじゃんw</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>たんさくかいし</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーなにここー、僕わかんなーい</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>（観戦者はメモ消そうね）</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>とりあえずベッドのふかふか加減を確かめます</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ばななー(   ᐛ)</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>うおーふわふわだー。</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>きょうもしごとつかれたなーー<br>あれーー、しごとってなにしてたっけー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ベッド目星できますか</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>できるー、半分で振ってくださいー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>鬼畜〜<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=5</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>つよーーい</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>草〜</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>つよー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>メモみっけた〜。<br>むずしくて読めないなー。<br>あ、やっぱり読めた。<br><br>メモ「それもひとつのせんたくし」</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>机みます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>うわーつくえだー。これつくえだー。</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>せんたくしってなにーー<br>おせんたくならわかるけどせんたくしってなにーー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>めぼしできますかー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>できるー、半分で振ってくださいー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ばななで笑う</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>1D100=55</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ふええん</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>つくえだー。</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>そういえばきみだれー？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>つくえだーー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>おい！俺はレモンだ！！ふざけんな！！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ぶたないでほしいのだ……</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>んーとね、えーとね<br>ゆずりは かずきちゃん。すきなものはおかねー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>本棚って目星できます？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>できるー</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>へーそーなんだーー<br>ぼくはおおくら たいよう、たぶん<br>たいようくんってよんでねー、たぶん</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>しますー<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=44</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>せいこうー</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>たいようくん<br>さんさんたいようくん</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>なんか絵本があるー<br>なんの絵本かわからないー<br>日本語振ったらわかるかもー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ふるーー<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=49</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>おひさまさんさん<br>あれおひさまみえない</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>わかんなーーい</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>なにこれぇ</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>なんでおひさまみえないのかなーー<br>あ、へやのなかだからだー、あははー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>たいようくんのところ行って絵本みにいきたーい</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>本投げ捨てておもちゃ箱漁ります</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>あばー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>投げ捨てられました</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>本拾いに行きます</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>えほんだ！ひろった！<br>わからん！にほんご！</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ていうかここだれのいえー？<br>ぼくんちじゃないよー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>おもちゃばこだ<br>りんごがつまってる</dd></dl><dl class="main tab_2" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>1D100=8</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>わーい</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわー、すごい、たくさんの、ばなな</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>あったまいー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>うおぉぉこれ！おおきなかぶ！おおきなかぶだ！うんとこしょどっこいしょだ！</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>うおおぉおおきなかぶだー！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>草</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>扉見に行きます</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>どっこいしょ</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>おおきなかぶって、おおきなかぶ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>扉だ。<br>ドアノブに太い紐が巻かれているぞ。</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーーなんだこれ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>おおきなかぶ<br>おつけものにしよう</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>なにー</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>なんかふといひもがまかれてるぞー<br>なんだこれー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>扉蹴ります</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>ばんばん、きっくふるー？</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ふるー<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=43</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>むりー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>えいえい</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>おこった？</dd></dl><dl class="main" style="color: rgb(187, 0, 77);"><dt>ドア</dt><dd>ｵｺｯﾃﾅｲﾖ</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーしゃべったーー<br>まあドアならしゃべるよねーー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>紐ひっぱれますかー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>ひっぱったー<br>うーんうーん、ちからがたりないよー<br>時間をかければひとりでも開くかもしれないなぁ</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>めっちゃねむーーい<br>なにしてるのゆずりはちゃーん</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ふえーんあかないよー<br>ちからがたりないのー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ふぬぬってしてます</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーー、たいへんだなー、がんばれー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>手伝えよ</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>がんばるー</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>てつだうーー？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>てつだってー</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>いいよー</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ありがとー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>後ろから和希ちゃんの体引っ張ります</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>うんとこしょどっこいしょ。<br>わーもうすぐでひらきそうだなぁ。<br>開けちゃおうかなぁ？どうしよう〜？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>開けちゃうー？</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>開けちゃうー？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>全部しらべたかなー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>めっちゃメモの裏見たいのにそんな賢い子みたいなことできなーい</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>セルフアイデアでもしよー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>わーい40〜<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=55</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>だめー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>今タイマー止まってる気がする。<br>悩むなぁ。</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ふえーん</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>あきそう〜<br>ここでたらかえれるのかな〜？</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>かずきちゃんわからないー</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>たいようくんもわかんないー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>タイマー動き始めたなぁ。</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>おそとだれかいるかなー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>机目星失敗してたー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>な、なんだってーー！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>唐突に机がきになりました<br>机に目星をふります</dd></dl><dl class="main" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>どうだろー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>どうぞぉ</dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=43</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>やったー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>すごーい！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>めもがあるなぁ</dd></dl><dl class="main" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>なんかつくえきになるー<br>なんかめもあるー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>でもよめないーにほんごー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーん<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D100=2</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>よめたーーーーー</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>つよすぎー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>母国語って成長ロール入ると思う？</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>うおおおおおお読める！！！！読めるぞーー！！！成長ロールも入るぞーーー！！！<br><br>メモ「ちからをあわせて」</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>あっ、なんか……</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>なんか……なに……</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>なに</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>やっぱりここでくらすことにするぞー！<br>もうここからでないんだーい！<br>あれ？なんかまぶしい。うわー。</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>？？？？？？？？</dd></dl><dl class="zatsudan"><dt></dt><dd>――目を開けると貴方達は見慣れた景色の中立っていた。<br>先程まで何をしていたのか、何故か思い出せない。<br>だがきっとそれは大した事ではなかったのだ。<br>頭の良い貴方達は特に疑問を抱くこと無く、日常へと帰っていく事でしょう。<br><br>〜Best ED〜</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>える</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>え？</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>どういうことなのwwwwwwwwwwwww</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>お疲れ様でした。<br>20分経過致しました。<br>後遺症なしのエンドです。</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>？？？？？？？？</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>わ、わーい</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>？？？？？？？？？？？？？？？？</dd></dl><dl class="zatsudan" style="color: rgb(244, 156, 0);"><dt>しじみ</dt><dd>草</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>どういうことなの？？？？？</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>ぽてと</dt><dd>大草原不可避</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>背景。<br>人間の知能を限界まで失わせたらどうなるのか、人間の脳に興味を持ったミ=ゴが探索者達の頭脳を退化させる。<br>知能を奪ったにも関わらず脱出することができた優秀な脳はミ=ゴが持っていきます。<br>頭の悪い人になれ、と言われたにも関わらず脱出しちゃった頭のいい人はお仕置きなんです。<br>百害あって一利なし。神話なんてそんなものです。たぶん</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>たぶん</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>わー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ちからをあわせてだってーーー！！！ってめっちゃ扉開けようとしてたわ</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>ほんそれ</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>言葉の意味理解してる賢い子じゃないか！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>ほんとだあああああああああ</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>百害あって一利なしは嘘ですね<br>2回もクリティカルありがとう</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>エンディング1(扉から脱出した)のやつ<br><br>ひっぱったらドアがあいた。うれしい。出る。<br>あ、なんかすごいまぶしい。うわー<br><br>目を開けると貴方達は見慣れた景色の中立っていた。先程まで何をしていたのか、何故か思い出せない。だがきっとそれは大した事ではなかったのだ。あぁ、なんだかとても頭が軽い。あたまがからっぽな、頭の悪い貴方達は特に疑問を抱くこと無く、日常へと帰っていく事でしょう。</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>【脳の損失】この探索者は脳がなくなってしまいました。知能系の技能に-10。<br>もしかしたら病院とかに行く機会があったら揉めるかもしれません（←よくわからん</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>脳がないくせに生きるな</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>草</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>馬鹿だから脳がないことに気付かず生きてられるんだよ</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>脳みそじゃなくて考える力の脳かな</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>https://www.pixiv.net/novel/show.php?id=9259836</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>それならなんとなくわかる気がする</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>そっちかも</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>↑しなりお</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>わーい、すぱむーー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわーでジワるから</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>成長は適当にやってねー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>9575<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>2D100=102</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>うわー<br></dd></dl><dl class="main tab_2" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>1D10=5</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>母国語80になっちゃったー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>えらーい！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>あったまいー！</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>ちなみにタイマー止めてた時点で残り１分で、机目星の時は実はもうすぎてた</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>わー</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>わー</dd></dl><dl class="zatsudan" style="color: rgb(187, 0, 77);"><dt>ばなな</dt><dd>って感じで解散！次卓も頭良いままだ！よかったね！おつおつ！わーい！</dd></dl><dl class="zatsudan" style="color: rgb(0, 126, 99);"><dt>大倉 太陽</dt><dd>おバカ探偵にならずにすんだね！<br>わーい！ たーのしー！<br>お疲れ様でしたー！ なんだこれ！ あはは！</dd></dl><dl class="zatsudan" style="color: rgb(239, 130, 0);"><dt>杠葉 和希</dt><dd>やったー！<br><br>おつかれさまー！</dd></dl><dl class="zatsudan" style="color: rgb(0, 119, 112);"><dt>ぽてと</dt><dd>おつかれーわーーーーい</dd></dl></div><footer></footer><script>const Hide = (checkbox) => {
+  const targets = document.getElementsByClassName(checkbox.id);
+  for (let el of targets) {
+    const contexts = el.className.split(' ');
+    let hide = checkbox.checked;
+    contexts.forEach(c => {
+      const cb = document.getElementById(c);
+      if (cb) hide &= cb.checked;
+    });
+    el.style.display = hide ? 'none' : '';
+  }
+}</script></body></html>
